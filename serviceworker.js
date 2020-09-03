@@ -22,12 +22,13 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
 	event.respondWith(
-		caches.open(VERSION).then((cache) => {
+		/*caches.open(VERSION).then((cache) => {
 			fetch(event.request).then((result) => {
 				cache.put(event.request, result.clone());
 			}).catch(() => {
 				cache.match(event.request);
 			})
-		})
+		})*/
+		caches.match(event.request);
 	);
 });
