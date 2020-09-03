@@ -1,0 +1,23 @@
+{
+	"name": "Fun Fact of the Gay",
+	"shortname": "FFotG",
+	"description": "Daily fun facts",
+	"lang": "en-US",
+	"scope": ".",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#FFAAAA",
+	"theme_color": "#FFAAAA",
+	"icons": [
+		{
+			"src": "icons/512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "icons/192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		}
+	]
+}

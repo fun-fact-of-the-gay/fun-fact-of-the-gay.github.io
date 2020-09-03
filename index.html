@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+	<head>
+		<title>Fun Fact of the Day</title>
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+		<meta name="theme-color" content="#FFAAAA">
+		
+		<meta property="og:title" content="Fun Fact of the Gay">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="/icons/512.png">
+		<meta property="og:url" content="https://fun-fact-of-the-gay.github.io">
+		<meta property="og:description" content="Daily fun facts">
+		
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@tagaroggu">
+		<meta name="twitter:name" content="Fun Fact of the Gay">
+		<meta name="twitter:description" content="Daily fun facts">
+		
+		<link rel="icon" href="./icons/192.png">
+		<link rel="manifest" href="./manifest.json">
+		<link rel="apple-touch-icon" href="./icons/192.png">
+		
+		<link href="https://unpkg.com/material-components-web@7.0.0/dist/material-components-web.min.css" rel="stylesheet"><script src="https://unpkg.com/material-components-web@7.0.0/dist/material-components-web.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		
+		<style>
+			:root {
+				--mdc-theme-primary: #FFAAAA;
+			}
+			body {margin: 0;}
+		</style>
+		<script async>
+			if ('serviceWorker' in navigator) {
+				window.addEvenetListener('load', () => {
+					navigator.serviceWorker.register('/serviceworker.js');
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<main>
+			<header class="mdc-top-app-bar" data-mdc-auto-init="MDCTopAppBar">
+				<div class="mdc-top-app-bar__row">
+					<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+						<span class="mdc-top-app-bar__title">Fun Fact of the Gay</span>
+					</section>
+				</div>
+			</header>
+		</main>
+		
+		<!-- MDC Auto Init Code -->
+		<script type="text/javascript">window.mdc.autoInit()</script>
+	</body>
+</html>
