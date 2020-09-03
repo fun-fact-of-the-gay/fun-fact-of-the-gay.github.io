@@ -32,7 +32,7 @@
 		</style>
 		<script async>
 			if ('serviceWorker' in navigator) {
-				window.addEvenetListener('load', () => {
+				window.addEventListener('load', () => {
 					navigator.serviceWorker.register('/serviceworker.js');
 				});
 			}
