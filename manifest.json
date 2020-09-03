@@ -1,6 +1,6 @@
 {
 	"name": "Fun Fact of the Gay",
-	"shortname": "FFotG",
+	"short_name": "FFotG",
 	"description": "Daily fun facts",
 	"lang": "en-US",
 	"scope": ".",
