@@ -7,40 +7,27 @@ self.addEventListener("install", (event) => {
 			console.log("Precaching assets...");
 			cache.addAll([
 				"offline.html",
-				
+				"index.html",
+				"https://unpkg.com/material-components-web@7.0.0/dist/material-components-web.min.css",
+				"https://unpkg.com/material-components-web@7.0.0/dist/material-components-web.min.js",
+				"https://fonts.googleapis.com/icon?family=Material+Icons"
 			]);
 		})
 	);
 });
+
 self.addEventListener("activate", (event) => {
 	console.log("Activated FFotG SW " + VERSION);
 });
+
 self.addEventListener("fetch", (event) => {
-	/*event.respondWith(
-		fetch(event.request)
-			.then((result) => {
-				return caches.open(VERSION)
-					.then((cache) => {
-						cache.put(event.request.url, result.clone());
-						return result;
-					});
-			}).catch(() => {
-				return caches.match(event.request).then((result) => {
-					if (res === undefined) {
-						return caches.match("offline.html");
-					}
-					return res;
-				});
-			})
-	);
 	event.respondWith(
-		fetch(event.request).then((result) => {
-			return result;
-			caches.open(VERSION).then((cache) => {
-				cache.add(event.request);
-			});
-		}).catch(() => {
-			return caches.match(event.request);
+		caches.open(VERSION).then((cache) => {
+			fetch(event.request).then((result) => {
+				cache.put(event.request, result.clone());
+			}).catch(() => {
+				cache.match(event.request);
+			})
 		})
-	);*/
+	);
 });
